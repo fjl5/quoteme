@@ -2,6 +2,9 @@
     "extensionDescription": {
         "message": "Fügt eine Zitatmarkierung um einen Textblock in mehrzeiligen Textfeldern ein. Dazu die Zitatzeilen markieren oder den Cursor in eine gewünschte Zeile setzen und den Toolbar-Button klicken oder [Strg]+[E] drücken.\n\nAufgrund von Einschränkungen des Browser kann man nach dem Aufruf des Plugins die vorherigen Änderungen in diesem Textfeld nicht mehr rückgängig machen."
     },
+    "contextMenuEntry": {
+        "message": "Textzeilen zitieren"
+    },
     "noTextareaWarning": {
         "message": "Den Cursor bitte in ein mehrzeiliges Texteingabefeld setzen und die zu zitierenden Zeilen markieren."
     },

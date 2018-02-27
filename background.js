@@ -16,3 +16,17 @@ browser.commands.onCommand.addListener(function(command) {
         runQuoteMe();
     }
 });
+
+// Add context menue
+browser.contextMenus.create({
+    id: "quote-context",
+    title: browser.i18n.getMessage("contextMenuEntry"),
+    contexts: ["editable"]
+});
+
+// Handle context menue
+browser.contextMenus.onClicked.addListener(function(info, tab) {
+    if (info.menuItemId == "quote-context") {
+        runQuoteMe();
+    }
+})
