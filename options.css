@@ -1,0 +1,12 @@
+.quoteme input {
+    font-family: monospace;
+}
+
+.quoteme th {
+    text-align: left;
+    padding: 10px 0px;
+}
+
+.quoteme tr {
+    padding-left: 20px;
+}

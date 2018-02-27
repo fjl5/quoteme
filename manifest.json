@@ -1,0 +1,56 @@
+{
+    "name": "QuoteMe",
+    "description": "__MSG_extensionDescription__",
+    "homepage_url": "https://github.com/fjl5/quoteme",
+    "author": "Achim Leitner",
+ 
+    "manifest_version": 2,
+    "version": "1.0",
+    "default_locale": "en",
+
+    "icons": {
+        "48": "icons/quote-48.png",
+        "96": "icons/quote.svg"
+    },
+
+    "applications": {
+        "gecko": {
+            "id": "quoteme@fjl.de"
+        }
+    },
+
+    "permissions": [
+        "storage", "activeTab", "clipboardRead"
+    ],
+
+    "options_ui": {
+        "page": "options.html",
+        "browser_style": true
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/quote-16.png",
+            "32": "icons/quote-32.png"
+        },
+        "default_title": "QuoteMe [Ctrl]+[E]"
+    },
+
+    "commands": {
+        "quote-text": {
+            "suggested_key": { "default": "Ctrl+E" },
+            "description": "Quote the selected text"
+        }
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}

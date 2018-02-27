@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="options.css">
+    </head>
+
+    <body>
+        <h1 data-i18n="Settings"></h1>
+        <form>
+            <table class="quoteme">
+
+                <th colspan="2" data-i18n="predefined"></th>
+                <tr>
+                    <td class="browser-style">
+                        <label for="quote-set" data-i18n="quoteSet"></label>
+                    </td>
+                    <td class="browser-style">
+                        <select id="quote-set" class="browser-style">
+                            <option value="" data-i18n="select"></option>
+                            <option value="asciiShort" data-i18n="asciiShort"></option>
+                            <option value="asciiLong" data-i18n="asciiLong"></option>
+                            <option value="unicodeLight" data-i18n="unicodeLight"></option>
+                            <option value="unicodeStrong" data-i18n="unicodeStrong"></option>
+                            <option value="unicodeDouble" data-i18n="unicodeDouble"></option>
+                            <option value="eMail" data-i18n="eMail"></option>
+                        </select>
+                    </td>
+                </tr>
+
+                <th colspan="2" data-i18n="markers"></th>
+                <tr>
+                    <td class="browser-style">
+                        <label for="quote-start" data-i18n="start"></label>
+                    </td>
+                    <td class="browser-style">
+                        <input type="text" id="quote-start">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="browser-style">
+                        <label for="quote-block" data-i18n="block"></label>
+                    </td>
+                    <td class="browser-style">
+                        <input type="text" id="quote-block">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="browser-style">
+                        <label for="quote-stopp" data-i18n="stopp"></label>
+                    </td>
+                    <td class="browser-style">
+                        <input type="text" id="quote-stopp">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" class="browser-style" data-i18n="save"></button>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+        <script src="options.js"></script>
+    </body>
+</html>

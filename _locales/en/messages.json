@@ -1,0 +1,53 @@
+{
+    "extensionDescription": {
+        "message": "Add quotation marks around text blocks in editor fields. Select the lines you want to quote or put the cursor to the line that should be quoted and press the toolbar button or [Ctrl]+[E].\n\nPlease note that, due to browser restrictions, calling the quote plugin will kill the undo buffer for the text entry field."
+    },
+    "noTextareaWarning": {
+        "message": "Set cursor into text area and mark the lines that should be quoted."
+    },
+    "settings": {
+        "message": "Settings"
+    },
+    "predefined": {
+        "message": "Verdefinierter Satz an Eistellungen"
+    },
+    "quoteSet": {
+        "message": "Quote set"
+    },
+    "select": {
+        "message": "Select:"
+    },
+    "asciiShort": {
+        "message": "ASCII short"
+    },
+    "asciiLong": {
+        "message": "ASCII long"
+    },
+    "unicodeLight": {
+        "message": "Light Unicode bars"
+    },
+    "unicodeStrong": {
+        "message": "Strong unicode bars"
+    },
+    "unicodeDouble": {
+        "message": "Double unicode bars"
+    },
+    "eMail": {
+        "message": "E-Mail"
+    },
+    "markers": {
+        "message": "Quotation markers"
+    },
+    "start": {
+        "message": "Quote start:"
+    },
+    "block": {
+        "message": "Quote block:"
+    },
+    "stopp": {
+        "message": "Quote stop:"
+    },
+    "save": {
+        "message": "Save"
+    }
+}
