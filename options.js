@@ -74,7 +74,6 @@ document.querySelector('form').addEventListener('submit', saveOptions);
 document.addEventListener('DOMContentLoaded', restoreOptions);
 
 // Translate options page
-for (let node of document.querySelectorAll('[data-i18n]')) {
-    node.appendChild(document.createTextNode(
-        browser.i18n.getMessage(node.dataset.i18n)))
+for (const node of document.querySelectorAll('[data-i18n]')) {
+    node.innerHTML = browser.i18n.getMessage(node.dataset.i18n);
 }

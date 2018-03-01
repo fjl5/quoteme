@@ -2,6 +2,27 @@
     "extensionDescription": {
         "message": "Fügt eine Zitatmarkierung um einen Textblock in mehrzeiligen Textfeldern ein. Dazu die Zitatzeilen markieren oder den Cursor in eine gewünschte Zeile setzen und den Toolbar-Button klicken oder [Strg]+[E] drücken.\n\nAufgrund von Einschränkungen des Browser kann man nach dem Aufruf des Plugins die vorherigen Änderungen in diesem Textfeld nicht mehr rückgängig machen."
     },
+    "infoUsage": {
+        "message": "<h2>Benutzung</h2><ul><li>Den Fokus (Textcursor) in ein mehrzeiliges Textfeld (<code>&lt;textarea&gt;</code>) einer beliebigen Webseite setzen</li><li>Die zu markierenden Zeilen auswählen. Um nur eine einzelne Zeile zu zitieren, genügt es den Cursor an eine beliebige Stelle in der Zeile zu setzen - es muss nichts ausgewählt/markiert werden. Um mehrere Zeilen zu zitieren, einfach eine Markierung von der ersten bis zur letzten Zeile einfügen - dabei müssen die erste und letzte Zeile nicht vollständig markiert sein.</li><li>Nun [Strg]+[E] drücken oder auf das QuoteMe-Symbol in der Werkzeugleise drücken.</li></ul>"
+    },
+    "infoQuoteDrawback": {
+        "message": "<h2>Nachteil</h2><p>Firefox hat sein Verhalten in <code>&lt;textarea&gt;</code>-Feldern geändert: Es löscht alle Rückgängig-Schritte (undo buffer), sobald JavaScript-Code den Inhalt des Textfelds ändert. Es gibt dazu zwar einen <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10'>Bug report</a>, aber noch keine Lösung. Das hat zur Folge, dass man nach einem QuoteMe-Aufruf die Änderungen vor diesem Aufruf nicht mehr rückgängig machen kann, auch die Zitatzeichen lassen sich nicht per [Strg]+[Z] entfernen.</p>"
+    },
+    "infoQuoteSet": {
+        "message": "Per Default verwendet QutoMe die kurze ASCII-Version; die lange ASCII-Version verwendet mehr Minuszeichen. Die Unicode-Varianten nutzen Kombinationen von <a href='https://de.wikipedia.org/wiki/Unicodeblock_Rahmenzeichnung'>Rahmenzeichen</a>, während E-Mail <code>&gt;</code> vor jede Zeile setzt und am Anfang <code>Quote:</code> einfügt."
+    },
+    "infoQuoteStart": {
+        "message": "Wird als komplette Zeile direkt vor dem zu zitierenden Block eingefügt."
+    },
+    "infoQuoteBlock": {
+        "message": "Diese Zeichen werden am Anfang jeder Zeile des zu zitierenden Blocks eingefügt."
+    },
+    "infoQuoteStopp": {
+        "message": "Wird als komplette Zeile direkt nach dem zu zitierenden Block eingefügt."
+    },
+    "infoQuoteSave": {
+        "message": "Änderungen an den Einstellungen weden erst nach einem Klick auf die 'Speichern'-Schaltfläche wirksam."
+    },
     "contextMenuEntry": {
         "message": "Textzeilen zitieren"
     },

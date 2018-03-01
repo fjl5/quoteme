@@ -4,9 +4,28 @@
 
 .quoteme th {
     text-align: left;
-    padding: 10px 0px;
+    padding: 15px 5px 10px 0px;
 }
 
-.quoteme tr {
-    padding-left: 20px;
+.quoteme td {
+    vertical-align: top;
+    padding: 5px 5px 5px 0px;
+}
+
+.quoteme td:first-child {
+    white-space: nowrap;
+    padding: 5px 5px 5px 20px;
+}
+
+.quoteme td p {
+    margin: 2px 0px;
+}
+
+.quoteme td a {
+    text-decoration: none;
+}
+
+.quoteme .help {
+    color: grey;
+    font-size: 90%;
 }
