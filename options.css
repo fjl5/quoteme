@@ -1,4 +1,4 @@
-.quoteme input {
+.quoteme input[type="text"] {
     font-family: monospace;
 }
 

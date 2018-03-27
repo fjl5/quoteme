@@ -20,6 +20,9 @@
     "infoQuoteStopp": {
         "message": "This full line inserted right after the to-be quoted text."
     },
+    "infoQuoteClean": {
+        "message": "Clean trailing whitespace characters in each quoted line."
+    },
     "infoQuoteSave": {
         "message": "Please note that any changes to the configuration only takes effect if you press the 'Save' button."
     },
@@ -70,6 +73,12 @@
     },
     "stopp": {
         "message": "Quote stop:"
+    },
+    "clean": {
+        "message": "Clean:"
+    },
+    "whitespace": {
+        "message": "whitespace"
     },
     "save": {
         "message": "Save"

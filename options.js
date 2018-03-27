@@ -50,6 +50,7 @@ function saveOptions(e) {
         quoteStart: document.querySelector('#quote-start').value,
         quoteBlock: document.querySelector('#quote-block').value,
         quoteStopp: document.querySelector('#quote-stopp').value,
+        quoteClean: document.querySelector('#quote-clean').checked,
     });
     e.preventDefault();
 }
@@ -57,14 +58,16 @@ function saveOptions(e) {
 // Load perviously saved options
 function restoreOptions() {
     browser.storage.sync.get(
-        ['quoteStart', 'quoteBlock', 'quoteStopp']
+        ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean']
     ).then((res) => {
-        document.querySelector('#quote-start').value = 
+        document.querySelector('#quote-start').value =
             res.quoteStart || quoteSets.asciiShort.start,
-        document.querySelector('#quote-block').value = 
+        document.querySelector('#quote-block').value =
             res.quoteBlock || quoteSets.asciiShort.block,
-        document.querySelector('#quote-stopp').value = 
-            res.quoteStopp || quoteSets.asciiShort.stopp
+        document.querySelector('#quote-stopp').value =
+            res.quoteStopp || quoteSets.asciiShort.stopp,
+        document.querySelector('#quote-clean').checked =
+            res.quoteClean
     });
 }
 

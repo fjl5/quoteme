@@ -7,11 +7,12 @@ function quoteMe() {
         let textarea = document.activeElement;
         // Get settings
         let gettingItem = browser.storage.sync.get(
-            ['quoteStart', 'quoteBlock', 'quoteStopp']);
+            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix']);
         gettingItem.then((res) => {
             let quoteStart = res.quoteStart || ',-------';
             let quoteBlock = res.quoteBlock || '| ';
             let quoteStopp = res.quoteStopp || '`-------';
+            let quoteClean = res.quoteClean ;
 
             // Get text
             let first = textarea.selectionStart;
@@ -33,6 +34,9 @@ function quoteMe() {
             // Create quoted text
             let quoted = quoteStart + "\n";
             text.substring(first, last).split("\n").forEach(function(line) {
+                if (quoteClean) {
+                    line = line.replace(/\s+$/g, "");
+                }
                 quoted += quoteBlock + line + "\n";
             });
             quoted += quoteStopp;

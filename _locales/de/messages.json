@@ -20,6 +20,9 @@
     "infoQuoteStopp": {
         "message": "Wird als komplette Zeile direkt nach dem zu zitierenden Block eingefügt."
     },
+    "infoQuoteClean": {
+        "message": "Alle Leerzeichen am Ende jeder zu zitierenden Zeile entfernen."
+    },
     "infoQuoteSave": {
         "message": "Änderungen an den Einstellungen weden erst nach einem Klick auf die 'Speichern'-Schaltfläche wirksam."
     },
@@ -70,6 +73,12 @@
     },
     "stopp": {
         "message": "Zitat-Ende:"
+    },
+    "clean": {
+        "message": "Säubern:"
+    },
+    "whitespace": {
+        "message": "Leerzeichen"
     },
     "save": {
         "message": "Speichern"
