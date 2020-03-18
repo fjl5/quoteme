@@ -8,7 +8,7 @@ if (typeof browser === "undefined") {
 // Run the quoteMe function in content.js
 function runQuoteMe() {
     browser.tabs.executeScript({
-        code: "quoteMe()",
+        file: 'content.js'
     });
 }
 

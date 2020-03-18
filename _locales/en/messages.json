@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Add quotation marks around text blocks in editor fields. Select the lines you want to quote or put the cursor to the line that should be quoted and press the toolbar button or [Ctrl]+[E].\n\nPlease note that, due to browser restrictions, calling the quote plugin will kill the undo buffer for the text entry field."
+        "message": "Add quotation marks around text blocks in editor fields: Select the lines you want to quote and press the toolbar button."
     },
     "infoUsage": {
         "message": "<h2>Usage</h2><ul><li>Set the focus (text cursor) in a multiline text field (<code>&lt;textarea&gt;</code>) of any web page)</li><li>Select the lines you want to qoute. If you only want to quote a single line, you don't need to mark any text, just set the cursor to any position within this line. In case you want to mark several lines, just select (highlight) the text range. The start and end of the selection can be on any position within the first and last line - no need te select full lines.</li><li>Now press [Ctrl]+[E] or click the QuoteMe icon in the toolbar.</li></ul>"

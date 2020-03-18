@@ -1,6 +1,6 @@
 {
     "extensionDescription": {
-        "message": "Fügt eine Zitatmarkierung um einen Textblock in mehrzeiligen Textfeldern ein. Dazu die Zitatzeilen markieren oder den Cursor in eine gewünschte Zeile setzen und den Toolbar-Button klicken oder [Strg]+[E] drücken.\n\nAufgrund von Einschränkungen des Browser kann man nach dem Aufruf des Plugins die vorherigen Änderungen in diesem Textfeld nicht mehr rückgängig machen."
+        "message": "Fügt eine Zitatmarkierung um einen Textblock ein: Zeilen markieren oder Cursor positionieren und den Toolbar-Button klicken."
     },
     "infoUsage": {
         "message": "<h2>Benutzung</h2><ul><li>Den Fokus (Textcursor) in ein mehrzeiliges Textfeld (<code>&lt;textarea&gt;</code>) einer beliebigen Webseite setzen</li><li>Die zu markierenden Zeilen auswählen. Um nur eine einzelne Zeile zu zitieren, genügt es den Cursor an eine beliebige Stelle in der Zeile zu setzen - es muss nichts ausgewählt/markiert werden. Um mehrere Zeilen zu zitieren, einfach eine Markierung von der ersten bis zur letzten Zeile einfügen - dabei müssen die erste und letzte Zeile nicht vollständig markiert sein.</li><li>Nun [Strg]+[E] drücken oder auf das QuoteMe-Symbol in der Werkzeugleise drücken.</li></ul>"

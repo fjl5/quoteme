@@ -41,28 +41,26 @@ function _addQuotes(res) {
 }
 
 // Add quotes
-function quoteMe() {
-    // Only quote active textarea
-    if (document.activeElement.tagName == "TEXTAREA") {
-        // Get settings
-        if (typeof browser === "undefined") {
-            // Chrome extension
-            chrome.storage.sync.get(
-                ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix'],
-                _addQuotes);
-        } else {
-            // Firefox extension
-            browser.storage.sync.get(
-                ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix']
-            ).then(_addQuotes)
-        }
+// Only quote active textarea
+if (document.activeElement.tagName == "TEXTAREA") {
+    // Get settings
+    if (typeof browser === "undefined") {
+        // Chrome extension
+        chrome.storage.sync.get(
+            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix'],
+            _addQuotes);
     } else {
-        if (typeof browser === "undefined") {
-            // Chrome extension
-            alert(chrome.i18n.getMessage("noTextareaWarning"));
-        } else {
-            // Firefox extension
-            alert(browser.i18n.getMessage("noTextareaWarning"));
-        }
+        // Firefox extension
+        browser.storage.sync.get(
+            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix']
+        ).then(_addQuotes)
+    }
+} else {
+    if (typeof browser === "undefined") {
+        // Chrome extension
+        alert(chrome.i18n.getMessage("noTextareaWarning"));
+    } else {
+        // Firefox extension
+        alert(browser.i18n.getMessage("noTextareaWarning"));
     }
 }
