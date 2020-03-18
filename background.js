@@ -1,5 +1,10 @@
 "use strict";
 
+if (typeof browser === "undefined") {
+    // Chrome compatibility
+    var browser = chrome;
+}
+
 // Run the quoteMe function in content.js
 function runQuoteMe() {
     browser.tabs.executeScript({

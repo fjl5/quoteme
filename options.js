@@ -1,5 +1,37 @@
 "use strict";
 
+function _doRestoreOptions(res) {
+    document.querySelector('#quote-start').value =
+        res.quoteStart || quoteSets.asciiShort.start,
+    document.querySelector('#quote-block').value =
+        res.quoteBlock || quoteSets.asciiShort.block,
+    document.querySelector('#quote-stopp').value =
+        res.quoteStopp || quoteSets.asciiShort.stopp
+    document.querySelector('#quote-clean').checked =
+        res.quoteClean
+}
+
+if (typeof browser === "undefined") {
+    // As long as the API calls are compatible, redirect
+    // the "browser" namespace to "chrome".
+    var browser = chrome;
+
+    // Chrome has no promise on the storage API
+    var restoreOptions = function() {
+        chrome.storage.sync.get(
+            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean'],
+            _doRestoreOptions
+        );
+    }
+} else {
+    // Firefox uses promises
+    restoreOptions = function() {
+        browser.storage.sync.get(
+            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean']
+        ).then(_doRestoreOptions);
+    }
+}
+
 // Predefined sets of quotation markers
 const quoteSets = {
     asciiShort: {
@@ -53,22 +85,6 @@ function saveOptions(e) {
         quoteClean: document.querySelector('#quote-clean').checked,
     });
     e.preventDefault();
-}
-
-// Load perviously saved options
-function restoreOptions() {
-    browser.storage.sync.get(
-        ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean']
-    ).then((res) => {
-        document.querySelector('#quote-start').value =
-            res.quoteStart || quoteSets.asciiShort.start,
-        document.querySelector('#quote-block').value =
-            res.quoteBlock || quoteSets.asciiShort.block,
-        document.querySelector('#quote-stopp').value =
-            res.quoteStopp || quoteSets.asciiShort.stopp,
-        document.querySelector('#quote-clean').checked =
-            res.quoteClean
-    });
 }
 
 // Add event handlers
