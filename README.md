@@ -1,14 +1,14 @@
-QuoteMe for Firefox (and possibly other browsers)
-=================================================
+QuoteMe for Firefox and Chrome (and possibly other browsers)
+============================================================
 
 This WebExtension adds both a toolbar button and a keyboard shortcut
-(Ctrl+E) to add qotation marks around lines of text in a multiline text
-field (`<textarea>`) of any web page. The typical usecases are text comments
-or bug reports which do not support html, markdown or other means of
-formatting text. If you want to visually separate your own comments from
-citations or code segments, you typically want to add a visual marker,
-like `-------`. This add on simplifies adding those markers. The type of
-markers is configurable.
+(Ctrl+E on Firefox, Ctrl+Shift+E in Chrome) to add qotation marks around
+lines of text in a multiline text field (`<textarea>`) of any web page.
+The typical usecases are text comments or bug reports which do not support
+html, markdown or other means of formatting text. If you want to visually
+separate your own comments from citations or code segments, you typically
+want to add a visual marker, like `-------`. This add on simplifies adding
+those markers. The type of markers is configurable.
 
 Usage
 -----
@@ -20,7 +20,7 @@ Usage
   within this line. In case you want to mark several lines, just select
   (highlight) the text range. The start and end of the selection can be on
   any position within the first and last line - no need te select full lines.
-* Now press Ctrl+E or click the QuoteMe icon
+* Now press Ctrl+E (on Chrome: Ctrl+Shift+E) or click the QuoteMe icon
   ![QuoteMe](icons/quote-16.png "QuoteMe [Ctrl]+[E]") in the toolbar.
 
 Before:
@@ -57,6 +57,8 @@ The default version is the short ASCII as used in the example above;
 long ASCII adds more dashes. The Unicode sets use combinations of
 [Box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character)
 while E-Mail adds `> ` to the text block and a literal `Quote` at the start.
+
+There also is an option to remove trailing whitespace on quoted lines.
 
 Please note that any changes to the configuration only takes effect if you
 press the "Save" button in the settings page.
