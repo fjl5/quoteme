@@ -9,7 +9,7 @@
         "message": "<h2>Nachteil</h2><p>Firefox hat sein Verhalten in <code>&lt;textarea&gt;</code>-Feldern geändert: Es löscht alle Rückgängig-Schritte (undo buffer), sobald JavaScript-Code den Inhalt des Textfelds ändert. Es gibt dazu zwar einen <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10'>Bug report</a>, aber noch keine Lösung. Das hat zur Folge, dass man nach einem QuoteMe-Aufruf die Änderungen vor diesem Aufruf nicht mehr rückgängig machen kann, auch die Zitatzeichen lassen sich nicht per [Strg]+[Z] entfernen.</p>"
     },
     "infoQuoteSet": {
-        "message": "Per Default verwendet QutoMe die kurze ASCII-Version; die lange ASCII-Version verwendet mehr Minuszeichen. Die Unicode-Varianten nutzen Kombinationen von <a href='https://de.wikipedia.org/wiki/Unicodeblock_Rahmenzeichnung'>Rahmenzeichen</a>, während E-Mail <code>&gt;</code> vor jede Zeile setzt und am Anfang <code>Quote:</code> einfügt."
+        "message": "Per Default verwendet QuoteMe die kurze ASCII-Version; die lange ASCII-Version verwendet mehr Minuszeichen. Die Unicode-Varianten nutzen Kombinationen von <a href='https://de.wikipedia.org/wiki/Unicodeblock_Rahmenzeichnung'>Rahmenzeichen</a>, während E-Mail <code>&gt;</code> vor jede Zeile setzt und am Anfang <code>Quote:</code> einfügt."
     },
     "infoQuoteStart": {
         "message": "Wird als komplette Zeile direkt vor dem zu zitierenden Block eingefügt."
@@ -24,7 +24,7 @@
         "message": "Alle Leerzeichen am Ende jeder zu zitierenden Zeile entfernen."
     },
     "infoQuoteSave": {
-        "message": "Änderungen an den Einstellungen weden erst nach einem Klick auf die 'Speichern'-Schaltfläche wirksam."
+        "message": "Änderungen an den Einstellungen werden erst nach einem Klick auf die 'Speichern'-Schaltfläche wirksam."
     },
     "contextMenuEntry": {
         "message": "Textzeilen zitieren"
@@ -36,7 +36,7 @@
         "message": "Einstellungen"
     },
     "predefined": {
-        "message": "Verdefinierter Satz an Eistellungen"
+        "message": "Vordefinierter Satz an Einstellungen"
     },
     "quoteSet": {
         "message": "Stil:"

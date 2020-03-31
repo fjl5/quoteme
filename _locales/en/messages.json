@@ -3,10 +3,10 @@
         "message": "Add quotation marks around text blocks in editor fields: Select the lines you want to quote and press the toolbar button."
     },
     "infoUsage": {
-        "message": "<h2>Usage</h2><ul><li>Set the focus (text cursor) in a multiline text field (<code>&lt;textarea&gt;</code>) of any web page)</li><li>Select the lines you want to qoute. If you only want to quote a single line, you don't need to mark any text, just set the cursor to any position within this line. In case you want to mark several lines, just select (highlight) the text range. The start and end of the selection can be on any position within the first and last line - no need te select full lines.</li><li>Now press [Ctrl]+[E] or click the QuoteMe icon in the toolbar.</li></ul>"
+        "message": "<h2>Usage</h2><ul><li>Set the focus (text cursor) in a multiline text field (<code>&lt;textarea&gt;</code>) of any web page)</li><li>Select the lines you want to quote. If you only want to quote a single line, you don't need to mark any text, just set the cursor to any position within this line. In case you want to mark several lines, just select (highlight) the text range. The start and end of the selection can be on any position within the first and last line - no need te select full lines.</li><li>Now press [Ctrl]+[E] or click the QuoteMe icon in the toolbar.</li></ul>"
     },
     "infoQuoteDrawback": {
-        "message": "<h2>Drawback</h2><p>Firefox changed the behaviour of the <code>&lt;textarea&gt;</code>: It now nukes the undo buffer if there are any text changes through JavaScript. There is a <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10'>Bug report</a> without any solution as of the time of writing. This means that after adding quotes through the QuoteMe add-on, you can not undo any previous changes, not even remove the quotes through [Ctrl]+[Z].</p>"
+        "message": "<h2>Drawback</h2><p>Firefox changed the behavior of the <code>&lt;textarea&gt;</code>: It now nukes the undo buffer if there are any text changes through JavaScript. There is a <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10'>Bug report</a> without any solution as of the time of writing. This means that after adding quotes through the QuoteMe add-on, you can not undo any previous changes, not even remove the quotes through [Ctrl]+[Z].</p>"
     },
     "infoQuoteSet": {
         "message": "The default version is the predefined short ASCII set; long ASCII adds more dashes. The Unicode sets use combinations of <a href='https://en.wikipedia.org/wiki/Box-drawing_character'>Box-drawing characters</a> while E-Mail adds <code>&gt;</code> to the text block and a literal <code>Quote</code> at the start."
@@ -36,7 +36,7 @@
         "message": "Settings"
     },
     "predefined": {
-        "message": "Verdefinierter Satz an Eistellungen"
+        "message": "Predefined settings"
     },
     "quoteSet": {
         "message": "Quote set:"
