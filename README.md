@@ -2,7 +2,7 @@ QuoteMe for Firefox and Chrome (and possibly other browsers)
 ============================================================
 
 This WebExtension adds both a toolbar button and a keyboard shortcut
-(Ctrl+E on Firefox, Ctrl+Shift+E in Chrome) to add qotation marks around
+(Ctrl+E on Firefox, Ctrl+Shift+E in Chrome) to add quotation marks around
 lines of text in a multiline text field (`<textarea>`) of any web page.
 The typical usecases are text comments or bug reports which do not support
 html, markdown or other means of formatting text. If you want to visually
@@ -66,12 +66,14 @@ press the "Save" button in the settings page.
 Drawback
 --------
 
-Firefox changed the behaviour of the `<textarea>`: It now nukes the undo
-buffer if there are any text changes through JavaScript. There is a
-[Bug report](https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10)
-without any solution as of the time of writing. This means that after
-adding quotes through the QuoteMe add-on, you can not undo any previous
-changes, not even remove the quotes through Ctrl+Z.
+Firefox 55 changed the behaviour of the `<textarea>`: It now nukes the undo
+buffer if there are any text changes through JavaScript. The
+[Bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10)
+was finally resolved in
+[Firefox 89](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/89).
+This means that in Firefox from Version 55 up to 88, after adding quotes
+through the QuoteMe add-on, you can not undo any previous changes, not even
+remove the quotes through Ctrl+Z. Firefox 89 and newer releases work as expected.
 
 Copyright
 ---------

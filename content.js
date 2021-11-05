@@ -35,9 +35,12 @@ function _addQuotes(res) {
     quoted += quoteStopp;
 
     // Insert quoted text
-    // We can't do this in a way that preserves the undo buffer
+    // In Firefox < 89 we can't do this in a way that preserves the undo buffer
     // https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10
-    textarea.setRangeText(quoted, first, last);
+    // https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/89
+    if (!document.execCommand('insertText', false, quoted)) {
+        textarea.setRangeText(quoted, first, last);
+    }
 }
 
 // Add quotes
