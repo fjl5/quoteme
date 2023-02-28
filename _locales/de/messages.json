@@ -82,5 +82,8 @@
     },
     "save": {
         "message": "Speichern"
+    },
+    "saved": {
+        "message": "gespeichert."
     }
 }

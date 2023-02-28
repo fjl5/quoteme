@@ -1,10 +1,10 @@
 "use strict";
 
 function _addQuotes(res) {
-    let quoteStart = res.quoteStart || ',-------';
-    let quoteBlock = res.quoteBlock || '| ';
-    let quoteStopp = res.quoteStopp || '`-------';
-    let quoteClean = res.quoteClean ;
+    let quoteStart = res.quoteStart;
+    let quoteBlock = res.quoteBlock;
+    let quoteStopp = res.quoteStopp;
+    let quoteClean = res.quoteClean;
 
     // Get text
     let textarea = document.activeElement;
@@ -50,13 +50,21 @@ if (document.activeElement.tagName == "TEXTAREA") {
     if (typeof browser === "undefined") {
         // Chrome extension
         chrome.storage.sync.get(
-            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix'],
+            {
+                quoteStart: ',-------',
+                quoteBlock: '| ',
+                quoteStopp: '`-------',
+                quoteClean: true
+            },
             _addQuotes);
     } else {
         // Firefox extension
-        browser.storage.sync.get(
-            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean', 'nix']
-        ).then(_addQuotes)
+        browser.storage.sync.get({
+            quoteStart: ',-------',
+            quoteBlock: '| ',
+            quoteStopp: '`-------',
+            quoteClean: true
+        }).then(_addQuotes)
     }
 } else {
     if (typeof browser === "undefined") {

@@ -1,14 +1,10 @@
 "use strict";
 
 function _doRestoreOptions(res) {
-    document.querySelector('#quote-start').value =
-        res.quoteStart || quoteSets.asciiShort.start,
-    document.querySelector('#quote-block').value =
-        res.quoteBlock || quoteSets.asciiShort.block,
-    document.querySelector('#quote-stopp').value =
-        res.quoteStopp || quoteSets.asciiShort.stopp
-    document.querySelector('#quote-clean').checked =
-        res.quoteClean
+    document.querySelector('#quote-start').value = res.quoteStart;
+    document.querySelector('#quote-block').value = res.quoteBlock;
+    document.querySelector('#quote-stopp').value = res.quoteStopp;
+    document.querySelector('#quote-clean').checked = res.quoteClean;
 }
 
 if (typeof browser === "undefined") {
@@ -19,16 +15,24 @@ if (typeof browser === "undefined") {
     // Chrome has no promise on the storage API
     var restoreOptions = function() {
         chrome.storage.sync.get(
-            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean'],
+            {
+                quoteStart: quoteSets.asciiShort.start,
+                quoteBlock: quoteSets.asciiShort.block,
+                quoteStopp: quoteSets.asciiShort.stopp,
+                quoteClean: true
+            },
             _doRestoreOptions
         );
     }
 } else {
     // Firefox uses promises
     restoreOptions = function() {
-        browser.storage.sync.get(
-            ['quoteStart', 'quoteBlock', 'quoteStopp', 'quoteClean']
-        ).then(_doRestoreOptions);
+        browser.storage.sync.get({
+            quoteStart: quoteSets.asciiShort.start,
+            quoteBlock: quoteSets.asciiShort.block,
+            quoteStopp: quoteSets.asciiShort.stopp,
+            quoteClean: true
+        }).then(_doRestoreOptions);
     }
 }
 
@@ -74,7 +78,10 @@ function setOptions() {
         document.querySelector('#quote-block').value = requestedSet.block;
         document.querySelector('#quote-stopp').value = requestedSet.stopp;
     }
+    changedOptions();
 }
+
+const saved = document.querySelector('#saved');
 
 // Save current options
 function saveOptions(e) {
@@ -85,12 +92,21 @@ function saveOptions(e) {
         quoteClean: document.querySelector('#quote-clean').checked,
     });
     e.preventDefault();
+    saved.style.display = '';  // show
+}
+
+function changedOptions() {
+    saved.style.display = 'none';  // hide
 }
 
 // Add event handlers
 document.querySelector('#quote-set').addEventListener('change', setOptions);
 document.querySelector('form').addEventListener('submit', saveOptions);
 document.addEventListener('DOMContentLoaded', restoreOptions);
+
+document.querySelectorAll('input').forEach((input) => {
+    input.addEventListener('change', changedOptions);
+});
 
 // Translate options page
 for (const node of document.querySelectorAll('[data-i18n]')) {
