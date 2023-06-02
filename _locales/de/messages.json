@@ -1,12 +1,12 @@
 {
     "extensionDescription": {
-        "message": "Fügt eine Zitatmarkierung um einen Textblock ein: Zeilen markieren oder Cursor positionieren und den Toolbar-Button klicken."
+        "message": "Fügt wahlweise eine Zitatmarkierung um einen Textblock ein oder ergänzt Anführungszeichen: Bereich markieren oder Cursor positionieren und den Toolbar-Button klicken."
     },
-    "infoUsage": {
-        "message": "<h2>Benutzung</h2><ul><li>Den Fokus (Textcursor) in ein mehrzeiliges Textfeld (<code>&lt;textarea&gt;</code>) einer beliebigen Webseite setzen</li><li>Die zu markierenden Zeilen auswählen. Um nur eine einzelne Zeile zu zitieren, genügt es den Cursor an eine beliebige Stelle in der Zeile zu setzen - es muss nichts ausgewählt/markiert werden. Um mehrere Zeilen zu zitieren, einfach eine Markierung von der ersten bis zur letzten Zeile einfügen - dabei müssen die erste und letzte Zeile nicht vollständig markiert sein.</li><li>Nun [Strg]+[E] drücken oder auf das QuoteMe-Symbol in der Werkzeugleise drücken.</li></ul>"
+    "infoUsageBlock": {
+        "message": "<h2>Blockzitat</h2><ul><li>Den Fokus (Textcursor) in ein mehrzeiliges Textfeld (<code>&lt;textarea&gt;</code>) einer beliebigen Webseite setzen.</li><li>Die zu markierenden Zeilen auswählen. Um nur eine einzelne Zeile zu zitieren, genügt es den Cursor an eine beliebige Stelle in der Zeile zu setzen - es muss nichts ausgewählt/markiert werden. Um mehrere Zeilen zu zitieren, einfach eine Markierung von der ersten bis zur letzten Zeile einfügen - dabei müssen die erste und letzte Zeile nicht vollständig markiert sein.</li><li>Nun [Strg]+[E] drücken oder - je nach eingestellter Default-Aktion - auf das QuoteMe-Icon in der Toolbar klicken.</li></ul>"
     },
-    "infoQuoteDrawback": {
-        "message": "<h2>Nachteil</h2><p>Firefox 55 hat sein Verhalten in <code>&lt;textarea&gt;</code>-Feldern geändert: Es löscht alle Rückgängig-Schritte (undo buffer), sobald JavaScript-Code den Inhalt des Textfelds ändert. Der <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1220696#c10'>Bug</a> wurde erst in <a href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/89'>Firefox 89</a> behoben. Das hat zur Folge, dass man in Firefox 55 bis 88 nach einem QuoteMe-Aufruf die Änderungen vor diesem Aufruf nicht mehr rückgängig machen kann, auch die Zitatzeichen lassen sich nicht per [Strg]+[Z] entfernen. Firefox 89 und neuere Versionen funktionieren korrekt.</p>"
+    "infoUsageInline": {
+        "message": "<h2>Anführungszeichen</h2><ul><li>Den Fokus (Textcursor) in ein Textfeld (<code>&lt;input&gt;</code> oder <code>&lt;textarea&gt;</code>) einer beliebigen Webseite setzen.</li><li>Den in Anführungszeichen zu setzenden Text auswählen. Um nur ein einzelnes Wort in Anführungszeichen zu setzen, genügt es den Cursor an eine beliebige Stelle im Wort zu setzen - es muss nichts ausgewählt/markiert werden.</li><li>Nun [Alt]+[M] drücken oder - je nach eingestellter Default-Aktion - auf das QuoteMe-Icon in der Toolbar klicken.</li></ul>"
     },
     "infoQuoteSet": {
         "message": "Per Default verwendet QuoteMe die kurze ASCII-Version; die lange ASCII-Version verwendet mehr Minuszeichen. Die Unicode-Varianten nutzen Kombinationen von <a href='https://de.wikipedia.org/wiki/Unicodeblock_Rahmenzeichnung'>Rahmenzeichen</a>, während E-Mail <code>&gt;</code> vor jede Zeile setzt und am Anfang <code>Quote:</code> einfügt."
@@ -26,20 +26,35 @@
     "infoQuoteSave": {
         "message": "Änderungen an den Einstellungen werden erst nach einem Klick auf die 'Speichern'-Schaltfläche wirksam."
     },
-    "contextMenuEntry": {
-        "message": "Textzeilen zitieren"
+    "infoQuotePrev": {
+        "message": "Das öffnende Anführungszeichen zu Beginn des Zitattextes."
+    },
+    "infoQuotePost": {
+        "message": "Das schließende Anführungszeichen am Ende des Zitattextes."
+    },
+    "contextMenuEntryBlock": {
+        "message": "Text&blöcke zitieren"
+    },
+    "contextMenuEntryInline": {
+        "message": "In &Anführungszeichen setzen"
     },
     "noTextareaWarning": {
         "message": "Den Cursor bitte in ein mehrzeiliges Texteingabefeld setzen und die zu zitierenden Zeilen markieren."
     },
+    "noTextInputWarning": {
+        "message": "Den Cursor bitte in ein Texteingabefeld setzen und den zu zitierenden Text markieren."
+    },
     "settings": {
         "message": "Einstellungen"
     },
-    "predefined": {
-        "message": "Vordefinierter Satz an Einstellungen"
+    "blockHead": {
+        "message": "Blockzitat"
+    },
+    "inlineHead": {
+        "message": "Anführungszeichen"
     },
     "quoteSet": {
-        "message": "Stil:"
+        "message": "Zitatweise:"
     },
     "select": {
         "message": "Auswählen:"
@@ -62,6 +77,30 @@
     "eMail": {
         "message": "E-Mail"
     },
+    "englishPrimary": {
+        "message": "“Englisch, primär”"
+    },
+    "englishSecondary": {
+        "message": "‘Englisch, sekundär⁠’"
+    },
+    "germanPrimary": {
+        "message": "„Deutsch, primär“"
+    },
+    "germanSecondary": {
+        "message": "‚Deutsch, sekundär⁠‘"
+    },
+    "germanAlternativePrimary": {
+        "message": "»Deutsch alternativ, primär«"
+    },
+    "germanAlternativeSecondary": {
+        "message": "›Deutsch alternativ, sekundär⁠‹"
+    },
+    "frenchPrimary": {
+        "message": "«Französisch⁠, primär»"
+    },
+    "frenchSecondary": {
+        "message": "‹Französisch⁠, sekundär⁠›"
+    },
     "markers": {
         "message": "Zitatmarkierungen"
     },
@@ -80,10 +119,28 @@
     "whitespace": {
         "message": "Leerzeichen"
     },
+    "prev": {
+        "message": "Öffnend:"
+    },
+    "post": {
+        "message": "Schließend:"
+    },
     "save": {
         "message": "Speichern"
     },
     "saved": {
         "message": "gespeichert."
+    },
+    "actionHead" : {
+        "message": "Default-Aktion"
+    },
+    "actionBlock" : {
+        "message": "Blockzitat"
+    },
+    "actionInline" : {
+        "message": "Anführungszeichen"
+    },
+    "actionInfo" : {
+        "message": "Aktion, die beim Click auf das QuoteMe-Icon in der Icon-Leiste ausgeführt werden soll."
     }
 }

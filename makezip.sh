@@ -1,9 +1,7 @@
-zip -r -FS quoteme-firefox.zip *.json *.html *.css *.js icons/ _locales/
+# Create FireFox version
+sed 's: *//FF::' manifest.json | zip -r -FS quoteme-firefox.zip - *.html *.css *.js icons/ _locales/
+7z rn quoteme-firefox.zip -- - manifest.json
 
 # Create Chrome version
-cp -a manifest.json manifest.json.bak
-sed -i '/^    "applications": {/,/^    }/ d' manifest.json
-sed -i -e 's/browser_style/chrome_style/' -e 's/\[Ctrl\]+\[E\]/[Ctrl]+[Shift]+[E]/' -e 's/Ctrl+E/Ctrl+Shift+E/' manifest.json
-zip -r -FS quoteme-chrome.zip *.json *.html *.css *.js icons/ _locales/
-
-mv manifest.json.bak manifest.json
+sed -e '/ *\/\/FF/ d' -e 's://CHROME ::' manifest.json | zip -r -FS quoteme-chrome.zip - *.html *.css *.js icons/ _locales/
+7z rn quoteme-chrome.zip -- - manifest.json

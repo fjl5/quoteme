@@ -7,80 +7,155 @@
     </head>
 
     <body>
-        <h1 data-i18n="Settings"></h1>
-        <form>
+        <form name="quoteme">
             <table class="quoteme">
-
-                <th colspan="2" data-i18n="predefined"></th>
                 <tr>
-                    <td class="browser-style" align="right">
-                        <label for="quote-set" data-i18n="quoteSet"></label>
+                    <th colspan="2">
+                        <h1 data-i18n="blockHead"></h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="block-quote-set" data-i18n="quoteSet"></label>
                     </td>
-                    <td class="browser-style">
-                        <select id="quote-set" class="browser-style">
-                            <option value="" data-i18n="select"></option>
-                            <option value="asciiShort" data-i18n="asciiShort"></option>
-                            <option value="asciiLong" data-i18n="asciiLong"></option>
-                            <option value="unicodeLight" data-i18n="unicodeLight"></option>
-                            <option value="unicodeStrong" data-i18n="unicodeStrong"></option>
-                            <option value="unicodeDouble" data-i18n="unicodeDouble"></option>
-                            <option value="eMail" data-i18n="eMail"></option>
+                    <td>
+                        <select id="block-quote-set">
+                            <option value=""                data-i18n="select"></option>
+                            <option value="asciiShort"      data-i18n="asciiShort"></option>
+                            <option value="asciiLong"       data-i18n="asciiLong"></option>
+                            <option value="unicodeLight"    data-i18n="unicodeLight"></option>
+                            <option value="unicodeStrong"   data-i18n="unicodeStrong"></option>
+                            <option value="unicodeDouble"   data-i18n="unicodeDouble"></option>
+                            <option value="eMail"           data-i18n="eMail"></option>
                         </select>
-                        <p class="help" data-i18n="infoQuoteSet"></p>
+                        <p class="help" data-i18n="infoBlockQuoteSet"></p>
                     </td>
                 </tr>
 
-                <th colspan="2" data-i18n="markers"></th>
                 <tr>
-                    <td class="browser-style" align="right">
+                    <th colspan="2" data-i18n="markers"></th>
+                </tr>
+                <tr>
+                    <td align="right">
                         <label for="quote-start" data-i18n="start"></label>
                     </td>
-                    <td class="browser-style">
-                        <input type="text" id="quote-start">
+                    <td>
+                        <input type="text" id="quote-start" />
                         <p class="help" data-i18n="infoQuoteStart"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="browser-style" align="right">
+                    <td align="right">
                         <label for="quote-block" data-i18n="block"></label>
                     </td>
-                    <td class="browser-style">
-                        <input type="text" id="quote-block">
+                    <td>
+                        <input type="text" id="quote-block" />
                         <p class="help" data-i18n="infoQuoteBlock"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="browser-style" align="right">
+                    <td align="right">
                         <label for="quote-stopp" data-i18n="stopp"></label>
                     </td>
-                    <td class="browser-style">
-                        <input type="text" id="quote-stopp">
+                    <td>
+                        <input type="text" id="quote-stopp" />
                         <p class="help" data-i18n="infoQuoteStopp"></p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="browser-style">
+                    <td align="right">
                         <label for="quote-clean" data-i18n="clean"></label>
                     </td>
-                    <td class="browser-style">
+                    <td>
                         <label>
-                            <input type="checkbox" id="quote-clean">
+                            <input type="checkbox" id="quote-clean" />
                             <span data-i18n="whitespace"></span>
                         </label>
                         <p class="help" data-i18n="infoQuoteClean"></p>
                     </td>
                 </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <h1 data-i18n="inlineHead"></h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="inline-quote-set" data-i18n="quoteSet"></label>
+                    </td>
+                    <td>
+                        <select id="inline-quote-set">
+                            <option value=""                            data-i18n="select"></option>
+                            <option value="englishPrimary"              data-i18n="englishPrimary"></option>
+                            <option value="englishSecondary"            data-i18n="englishSecondary"></option>
+                            <option value="germanPrimary"               data-i18n="germanPrimary"></option>
+                            <option value="germanSecondary"             data-i18n="germanSecondary"></option>
+                            <option value="germanAlternativePrimary"    data-i18n="germanAlternativePrimary"></option>
+                            <option value="germanAlternativeSecondary"  data-i18n="germanAlternativeSecondary"></option>
+                            <option value="frenchPrimary"               data-i18n="frenchPrimary"></option>
+                            <option value="frenchSecondary"             data-i18n="frenchSecondary"></option>
+                        </select>
+                        <p class="help" data-i18n="infoInlineQuoteSet"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2" data-i18n="markers"></th>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="quote-prev" data-i18n="prev"></label>
+                    </td>
+                    <td>
+                        <input type="text" id="quote-prev" />
+                        <p class="help" data-i18n="infoQuotePrev"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">
+                        <label for="quote-block" data-i18n="post"></label>
+                    </td>
+                    <td>
+                        <input type="text" id="quote-post" />
+                        <p class="help" data-i18n="infoQuotePost"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <h1 data-i18n="actionHead"></h1>
+                    </th>
+                </tr>
+
                 <tr>
                     <td></td>
                     <td>
-                        <button type="submit" id="submit" class="browser-style" data-i18n="save"></button>
+                        <input type="radio" name="defaultAction" value="quote_block" />
+                        <label for="block" data-i18n="actionBlock"></label><br>
+                        <input type="radio" name="defaultAction" value="quote_inline" />
+                        <label for="block" data-i18n="actionInline"></label><br>
+                        <p class="help" data-i18n="actionInfo"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <h1 data-i18n="save"></h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" id="submit" data-i18n="save"></button>
                         <span id="saved" style="display: none" data-i18n="saved"></span>
                         <p class="help" data-i18n="infoQuoteSave"></p>
                     </td>
                 </tr>
             </table>
-            <span class="help" data-i18n="infoUsage"></span>
-            <span class="help" data-i18n="infoQuoteDrawback"></span>
+
+            <div data-i18n="infoUsageBlock"></div>
+            <div data-i18n="infoUsageInline"></div>
         </form>
         <script type="application/javascript" src="options.js"></script>
     </body>

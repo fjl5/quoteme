@@ -4,10 +4,16 @@
     "homepage_url": "https://github.com/fjl5/quoteme",
     "author": "Achim Leitner",
  
-    "manifest_version": 2,
-    "version": "1.0.10",
+    "manifest_version": 3,
+    "version": "2.0.0",
     "default_locale": "en",
 
+    "browser_specific_settings": {  //FF
+        "gecko": {                  //FF
+            "id": "quoteme@fjl.de"  //FF
+        }                           //FF
+    },                              //FF
+                                    //FF
     "icons": {
         "16": "icons/quote-16.png",
         "32": "icons/quote-32.png",
@@ -16,22 +22,15 @@
         "128": "icons/quote-128.png"
     },
 
-    "applications": {
-        "gecko": {
-            "id": "quoteme@fjl.de"
-        }
-    },
-
     "permissions": [
-        "storage", "activeTab", "contextMenus"
+        "storage", "scripting", "activeTab", "contextMenus"
     ],
 
     "options_ui": {
-        "page": "options.html",
-        "browser_style": true
+        "page": "options.html"
     },
 
-    "browser_action": {
+    "action": {
         "default_icon": {
             "16": "icons/quote-16.png",
             "32": "icons/quote-32.png"
@@ -40,13 +39,19 @@
     },
 
     "commands": {
-        "quote-text": {
-            "suggested_key": { "default": "Ctrl+E" },
-            "description": "Quote the selected text"
+        "quote_block": {
+            "suggested_key": { "default": "Ctrl+E" }, //FF
+            //CHROME "suggested_key": { "default": "Alt+B" },
+            "description": "Quote the selected text block"
+        },
+        "quote_inline": {
+            "suggested_key": { "default": "Alt+M" },
+            "description": "Quote the selected text string"
         }
     },
 
     "background": {
-        "scripts": ["background.js"]
+        "scripts": ["background.js"]        //FF
+        //CHROME "service_worker": "background.js"
     }
 }
