@@ -101,6 +101,18 @@
     "frenchSecondary": {
         "message": "‹Französisch⁠, sekundär⁠›"
     },
+    "hungarianPrimary": {
+        "message": "„Ungarisch⁠, primär⁠”"
+    },
+    "hungarianSecondary": {
+        "message": "»Ungarisch⁠, sekundär⁠«"
+    },
+    "spanishExclamation": {
+        "message": "¡Spanische Ausrufezeichen!"
+    },
+    "spanishQuestion": {
+        "message": "¿Spanische Fragezeichen?"
+    },
     "markers": {
         "message": "Zitatmarkierungen"
     },

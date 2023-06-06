@@ -140,6 +140,22 @@ const quoteSets = {
             prev: '‹',
             post: '›'
         },
+        hungarianPrimary: {
+            prev: '„',
+            post: '”'
+        },
+        hungarianSecondary: {
+            prev: '»',
+            post: '«'
+        },
+        spanishExclamation: {
+            prev: '¡',
+            post: '!'
+        },
+        spanishQuestion: {
+            prev: '¿',
+            post: '?'
+        },
     },
 }
 

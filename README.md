@@ -68,8 +68,12 @@ After:
 
     “To be or not to be”, she said.
 
-Configuration
--------------
+## Configuration
+
+Please note that any changes to the configuration only take effect if you
+press the "Save" button in the settings page.
+
+### Block quotes
 
 The add-on has a settings page where can select from a range of predefined
 marks or enter any characters that should serve as marks. There are three
@@ -86,16 +90,16 @@ while E-Mail adds `> ` to the text block and a literal `Quote` at the start.
 
 There also is an option to remove trailing whitespace on quoted lines.
 
+### Regular text quotes
+
 Regular text quotes have two marks: the opening and closing quote character
 at the beginning and the end of the string.
 [Quotation marks](https://en.wikipedia.org/wiki/Quotation_mark#Summary_table)
-for some western languages are predefined. You can easily add your own.
+for some western languages are predefined, plus spanish
+[Inverted question and exclamation marks](https://en.wikipedia.org/wiki/Inverted_question_and_exclamation_marks).
+You can easily enter your own marks.
 
-Please note that any changes to the configuration only take effect if you
-press the "Save" button in the settings page.
-
-Historical note
----------------
+## Historical note
 
 Firefox 55 changed the behavior of the `<textarea>`: It now nukes the undo
 buffer if there are any text changes through JavaScript. The
