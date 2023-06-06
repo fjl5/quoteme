@@ -24,65 +24,61 @@ async function runQuoteMe(tab, command) {
     );
 }
 
-browser.runtime.onInstalled.addListener( function() {
-    // Handle toolbar button press. 
-    if (haveChrome) {
-        // Chrome has no onClickData attribute here
-        browser.action.onClicked.addListener(function(tab) {
+// Handle toolbar button press
+if (haveChrome) {
+    // Chrome has no onClickData attribute here
+    browser.action.onClicked.addListener(function(tab) {
+        runQuoteMe(tab, "default");
+    });
+} else {
+    // Firefox has onClickData which allows to detect modifier keys
+    browser.action.onClicked.addListener(function(tab, onClickData) {
+        if (onClickData.modifiers.indexOf('Shift') >= 0) {
+            runQuoteMe(tab, "alternative");
+        } else {
             runQuoteMe(tab, "default");
-        });
+        }
+    });
+}
+
+// Handle keyboard shortcut
+browser.commands.onCommand.addListener(function(command, tab) {
+    if (tab) {
+        runQuoteMe(tab, command);
     } else {
-        // Firefox has onClickData which allows to detect modifier keys
-        browser.action.onClicked.addListener(function(tab, onClickData) {
-            if (onClickData.modifiers.indexOf('Shift') >= 0) {
-                runQuoteMe(tab, "alternative");
-            } else {
-                runQuoteMe(tab, "default");
-            }
+        browser.tabs.query({active: true}).then(function(tab) {
+            runQuoteMe(tab[0], command);
         });
     }
+});
 
-    // Handle keyboard shortcut
-    browser.commands.onCommand.addListener(function(command, tab) {
-        if (tab) {
-            runQuoteMe(tab, command);
-        } else {
-            browser.tabs.query({active: true}).then(function(tab) {
-                runQuoteMe(tab[0], command);
-            });
-        }
-    });
-
-    // Add context menue to editable fields
-    browser.contextMenus.create({
-        id: "quote_block",
-        title: browser.i18n.getMessage("contextMenuEntryBlock"),
-        contexts: ["editable"]
-    });
-    browser.contextMenus.create({
-        id: "quote_inline",
-        title: browser.i18n.getMessage("contextMenuEntryInline"),
-        contexts: ["editable"]
-    });
-    // Add context menue browser_action icon
-    browser.contextMenus.create({
-        id: "quote_settings",
-        title: browser.i18n.getMessage("settings"),
-        contexts: ["editable", "action"]
-    });
+// Add context menue to editable fields
+browser.contextMenus.create({
+    id: "quote_block",
+    title: browser.i18n.getMessage("contextMenuEntryBlock"),
+    contexts: ["editable", "action"]
+});
+browser.contextMenus.create({
+    id: "quote_inline",
+    title: browser.i18n.getMessage("contextMenuEntryInline"),
+    contexts: ["editable", "action"]
+});
+browser.contextMenus.create({
+    id: "quote_settings",
+    title: browser.i18n.getMessage("settings"),
+    contexts: ["editable"]
+});
 
 
-    // Handle editable fields' context menue
-    browser.contextMenus.onClicked.addListener(function(info, tab) {
-        if (info.menuItemId == "quote_block") {
-            runQuoteMe(tab, "quote_block");
-        }
-        else if (info.menuItemId == "quote_inline") {
-            runQuoteMe(tab, "quote_inline");
-        }
-        else if (info.menuItemId == "quote_settings") {
-            browser.runtime.openOptionsPage();
-        }
-    });
-
+// Handle editable fields' context menue
+browser.contextMenus.onClicked.addListener(function(info, tab) {
+    if (info.menuItemId == "quote_block") {
+        runQuoteMe(tab, "quote_block");
+    }
+    else if (info.menuItemId == "quote_inline") {
+        runQuoteMe(tab, "quote_inline");
+    }
+    else if (info.menuItemId == "quote_settings") {
+        browser.runtime.openOptionsPage();
+    }
 });
