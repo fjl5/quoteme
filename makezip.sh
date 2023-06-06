@@ -1,5 +1,5 @@
 # Create FireFox version
-sed 's: *//FF::' manifest.json | zip -r -FS quoteme-firefox.zip - *.html *.css *.js icons/ _locales/
+sed -e '/ *\/\/CHROME/ d' -e 's: *//FF::' manifest.json | zip -r -FS quoteme-firefox.zip - *.html *.css *.js icons/ _locales/
 7z rn quoteme-firefox.zip -- - manifest.json
 
 # Create Chrome version

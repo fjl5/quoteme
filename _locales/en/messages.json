@@ -1,12 +1,12 @@
 {
     "extensionDescription": {
-        "message": "Add quotation marks around text blocks or around words and sentences: Select the range you want to quote and press the toolbar button."
+        "message": "Add quotation marks around text blocks or words and sentences: Select the range you want to quote and press the toolbar button."
     },
     "infoUsageBlock": {
-        "message": "<h2>Block quotes</h2><ul><li>Set the focus (text cursor) in a multiline text field (<code>&lt;textarea&gt;</code>) of any web page.</li><li>Select the lines you want to quote. If you only want to quote a single line, you don't need to mark any text, just set the cursor to any position within this line. In case you want to mark several lines, just select (highlight) the text range. The start and end of the selection can be on any position within the first and last line - no need te select full lines.</li><li>Now press [Ctrl]+[E] or - depending on the default action configured - click the QuoteMe icon in the toolbar.</li></ul>"
+        "message": "<h2>Block quotes</h2><ul><li>Set the focus (text cursor) in a multiline text field (<code>&lt;textarea&gt;</code>) of any web page.</li><li>Select the lines you want to quote. If you only want to quote a single line, you don't need to mark any text, just set the cursor to any position within this line. In case you want to mark several lines, just select (highlight) the text range. The start and end of the selection can be on any position within the first and last line - no need te select full lines.</li><li>Now press [Ctrl]+[E] (onm Chrome: [Alt]+[B]) or - depending on the default action configured - click the QuoteMe icon in the toolbar.</li></ul>"
     },
     "infoUsageInline": {
-        "message": "<h2>Inline quotes</h2><ul><li>Set the focus (text cursor) in a text field (<code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>) of any web page.</li><li>Select the text range you want to quote. If you only want to quote a single word, you don't need to mark any text, just set the cursor to any position within this word.</li><li>Now press [Ctrl]+[M] or - depending on the default action configured - click the QuoteMe icon in the toolbar.</li></ul>"
+        "message": "<h2>Inline quotes</h2><ul><li>Set the focus (text cursor) in a text field (<code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code>) of any web page.</li><li>Select the text range you want to quote. If you only want to quote a single word, you don't need to mark any text, just set the cursor to any position within this word.</li><li>Now press [Alt]+[M] or - depending on the default action configured - click the QuoteMe icon in the toolbar.</li></ul>"
     },
     "infoQuoteSet": {
         "message": "The default version is the predefined short ASCII set; long ASCII adds more dashes. The Unicode sets use combinations of <a href='https://en.wikipedia.org/wiki/Box-drawing_character'>Box-drawing characters</a> while E-Mail adds <code>&gt;</code> to the text block and a literal <code>Quote</code> at the start."
