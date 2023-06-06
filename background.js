@@ -46,7 +46,10 @@ browser.commands.onCommand.addListener(function(command, tab) {
     if (tab) {
         runQuoteMe(tab, command);
     } else {
-        browser.tabs.query({active: true}).then(function(tab) {
+        browser.tabs.query({
+            active: true,
+            currentWindow: true
+        }).then(function(tab) {
             runQuoteMe(tab[0], command);
         });
     }
